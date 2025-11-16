@@ -1,17 +1,18 @@
-
-name: CI - HW5 ML Pipeline
+name: CI ML pipeline
 
 on:
   push:
-    branches: [ main, master ]
+    branches:
+      - main
+      - master
   pull_request:
 
 jobs:
-  build-and-train:
+  run-ml-pipeline:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -21,8 +22,9 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install --no-cache-dir -r requirements.txt
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
-      - name: Run training script
+      - name: Run training pipeline
         run: |
           python src/train.py

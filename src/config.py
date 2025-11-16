@@ -9,11 +9,10 @@ DATA_DIR = BASE_DIR / "data"
 MODELS_DIR = BASE_DIR / "models"
 REPORTS_DIR = BASE_DIR / "reports"
 
-# Убедимся, что директории существуют
 for d in [DATA_DIR, MODELS_DIR, REPORTS_DIR]:
     os.makedirs(d, exist_ok=True)
 
-# Настройки модели по умолчанию
+# Настройки модели
 RANDOM_STATE = 42
 N_ESTIMATORS = 100
 
