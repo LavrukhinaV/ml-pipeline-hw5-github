@@ -2,6 +2,7 @@ mlflow
 cryptography==41.0.5
 evidently
 deepchecks
+anywidget
 pandas
 numpy<2.0.0
 scikit-learn
