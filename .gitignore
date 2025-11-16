@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.log
+
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data & models
+data/
+models/
+reports/
+
+# MLflow локальные файлы
+mlruns/
+mlflow.db
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
